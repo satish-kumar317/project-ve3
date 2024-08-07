@@ -19,9 +19,7 @@ Numpy
 Matplotlib
 Seaborn
 
-Installation
-
-Git hub project link : https://github.com/satish-kumar317/project-ve3.git
+Installation:
   - cd project-ve3/csvfiles
 Run the Django migrations:
   - python manage.py migrate
