@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 >Data Analysis Results</h1>
+        
+        <h2 >First Few Rows of the Data</h2>
+        <div>{{ first_rows|safe }}</div>
+<!--
+        <h2>Analysis</h2>
+        <div>{{ summary_stats|safe }}</div>
+-->
+        <h2>Mean</h2>
+        <div>{{ mean|safe }}</div>
+
+        <h2>Median</h2>
+        <div>{{ median|safe }}</div>
+
+        <h2>Standard Deviation</h2>
+        <div>{{ std_dev|safe }}</div>
+
+        <h2>Missing Values</h2>
+        <div>{{ missing_values|safe }}</div>
+
+        <h2>Histograms</h2>
+        {% for hist_path in histograms %}
+        <img src="data:image/png;base64,{{ hist_path }}" alt="Histograms">
+        {% endfor %}
+
+    </div>
+</body>
+</html>
